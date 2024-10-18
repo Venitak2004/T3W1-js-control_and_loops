@@ -1,7 +1,8 @@
 let fruitChoices = [
     "oranges",
     "bananas",
-    "mangoes"
+    "mangoes",
+    "lemons"
 ];
 // set index to the lowest value of the index = 0, add a condition of 
 //how many times the array
@@ -29,3 +30,17 @@ fruitChoices.forEach(element => {
 for (const fruit of fruitChoices) {
     console.log("For of result: " + fruit);
 }
+
+//map -> map reutnrs a new array, and every element has a change applied on it.
+
+let fruitChoicesShortened = fruitChoices.map(fruit => {
+    return fruit.substring(0,3);
+})
+console.log(fruitChoicesShortened);
+
+//filter -> returns a new array, only with the elements that meet the condition.
+
+let nonCitrusFruits = fruitChoices.filter(fruit => {
+    return fruit != "oranges" && fruit != "lemons"
+})
+console.log(nonCitrusFruits);
